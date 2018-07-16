@@ -7152,9 +7152,6 @@ const line = require('@line/bot-sdk');
 const express = require('express');
 var datavase = new Firebase('https://pcboy-8cbb8.firebaseio.com/');
 
-CHANNEL_ACCESS_TOKEN = "cMeUQa0vuUCXW/kCWVxzTkDWZkIW+oVA1iu6WOkxb3bY2oHbop0O3nya1FfgQUEnzNS7y3cQjtV244GIeo7Kneed3zCQ2i3+kZYw8t5uyAfe1SG/s8Yusn9Ozs8ysbV8BpIXjBpPn/fD+uR+BNhnBAdB04t89/1O/w1cDnyilFU=";
-CHANNEL_SECRET = "4e9db55a599b246ec231910b013bffc3";
-
 // create LINE SDK config from env variables
 const config = {
   channelAccessToken: process.env.CHANNEL_ACCESS_TOKEN,
