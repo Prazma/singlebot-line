@@ -1,8 +1,5 @@
-/*below are the local functions for processing messages*/
-
 const line = require('@line/bot-sdk');
 const express = require('express');
-var datavase = new Firebase('https://pcboy-8cbb8.firebaseio.com/');
 
 // create LINE SDK config from env variables
 const config = {
@@ -34,12 +31,6 @@ function handleEvent(event) {
   if (event.type !== 'message' || event.message.type !== 'text') {
     // ignore non-text-message event
     return Promise.resolve(null);
-  }
-
-  if(event.message.type != "group") {
-    datavase.push({textID:event.message.id,textContent:event.message.text,type:"room",sourceID:event.message.roomId});
-  } else {
-    datavase.push({textID:event.message.id,textContent:event.message.text,type:"group",sourceID:event.message.groupId});
   }
 
   // create a echoing text message
